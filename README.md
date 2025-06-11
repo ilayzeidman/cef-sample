@@ -84,10 +84,35 @@ Other option is publish your application on Microsoft Store. See some tutorials:
 * https://docs.microsoft.com/windows/win32/win_cert/windows-certification-portal
 * https://www.electronjs.org/docs/tutorial/windows-store-guide
 
-## License
+## Build Instructions
 
-This license informations is about this personal project, not the CEF Library.
+To build the project, follow these steps:
 
-[MIT](http://opensource.org/licenses/MIT)
+1. **Create a build directory and navigate into it:**
+    ```sh
+    mkdir build
+    cd build
+    ```
 
-Copyright (c) 2021-2024, Paulo Coutinho
+2. **Run CMake to configure the project.**  
+    CMake will automatically detect your platform:
+    ```sh
+    cmake ..
+    ```
+
+3. **Compile the project:**
+    ```sh
+    cmake --build .
+    ```
+
+4. **(Optional) Specify a build type (e.g., Release):**
+    ```sh
+    cmake -DCMAKE_BUILD_TYPE=Release ..
+    cmake --build .
+    ```
+
+5. **Run the application:**
+    ```sh
+    ./Release/MyApp --no-sandbox
+    ```
+
